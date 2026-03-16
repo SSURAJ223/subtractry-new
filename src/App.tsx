@@ -77,7 +77,7 @@ export default function App() {
 
       {/* Hero Section */}
       <section className="relative pt-20 pb-32 overflow-hidden">
-        <div className="absolute inset-0 bg-[url('https://picsum.photos/seed/aerospace/1920/1080?blur=2')] bg-cover bg-center opacity-10"></div>
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1537462715879-360eeb61a0ad?auto=format&fit=crop&q=80&w=1920')] bg-cover bg-center opacity-10"></div>
         <div className="absolute inset-0 bg-gradient-to-b from-slate-50/50 to-slate-50"></div>
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -196,7 +196,7 @@ export default function App() {
             </div>
             <div className="w-full md:w-1/2">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                <img src="https://picsum.photos/seed/cnc-machining/800/600" alt="Precision CNC Machined Part" className="w-full h-auto object-cover" referrerPolicy="no-referrer" />
+                <img src="https://images.unsplash.com/photo-1565439390-28546de54204?auto=format&fit=crop&q=80&w=800" alt="Precision CNC Machined Part" className="w-full h-auto object-cover" referrerPolicy="no-referrer" />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent flex items-end p-6">
                   <span className="text-white font-medium">5-Axis CNC Machined Titanium Impeller</span>
                 </div>
@@ -218,7 +218,7 @@ export default function App() {
           <div className="grid md:grid-cols-3 gap-8">
             <div className="group rounded-2xl overflow-hidden shadow-lg border border-slate-100">
               <div className="h-48 overflow-hidden relative">
-                <img src="https://picsum.photos/seed/aviation/600/400" alt="Commercial Aviation" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" referrerPolicy="no-referrer" />
+                <img src="https://images.unsplash.com/photo-1544377193-33dcf4d68fb5?auto=format&fit=crop&q=80&w=600" alt="Commercial Aviation" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" referrerPolicy="no-referrer" />
               </div>
               <div className="p-6 bg-white">
                 <h3 className="text-xl font-bold text-slate-900 mb-2">Commercial Aviation</h3>
@@ -228,7 +228,7 @@ export default function App() {
             
             <div className="group rounded-2xl overflow-hidden shadow-lg border border-slate-100">
               <div className="h-48 overflow-hidden relative">
-                <img src="https://picsum.photos/seed/defense-military/600/400" alt="Defense Systems" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" referrerPolicy="no-referrer" />
+                <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=600" alt="Defense Systems" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" referrerPolicy="no-referrer" />
               </div>
               <div className="p-6 bg-white">
                 <h3 className="text-xl font-bold text-slate-900 mb-2">Defense Systems</h3>
@@ -238,7 +238,7 @@ export default function App() {
 
             <div className="group rounded-2xl overflow-hidden shadow-lg border border-slate-100">
               <div className="h-48 overflow-hidden relative">
-                <img src="https://picsum.photos/seed/satellite-space/600/400" alt="Space Exploration" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" referrerPolicy="no-referrer" />
+                <img src="https://images.unsplash.com/photo-1614728263952-84ea256f9679?auto=format&fit=crop&q=80&w=600" alt="Space Exploration" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" referrerPolicy="no-referrer" />
               </div>
               <div className="p-6 bg-white">
                 <h3 className="text-xl font-bold text-slate-900 mb-2">Space Exploration</h3>
@@ -260,33 +260,33 @@ export default function App() {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             <div className="col-span-2 row-span-2 relative rounded-2xl overflow-hidden shadow-md group h-80 md:h-auto">
-              <img src="https://picsum.photos/seed/cnc-aerospace-part/800/800" alt="Complex CNC Machined Aerospace Part" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" referrerPolicy="no-referrer" />
+              <img src="https://images.unsplash.com/photo-1581092335397-9583eb92d232?auto=format&fit=crop&q=80&w=800" alt="Complex CNC Machined Aerospace Part" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" referrerPolicy="no-referrer" />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                <span className="text-white font-medium">5-Axis Machined Titanium Bracket</span>
+                <span className="text-white font-medium">CAD Engineering & Prototyping</span>
               </div>
             </div>
             <div className="relative rounded-2xl overflow-hidden shadow-md group h-48 md:h-64">
-              <img src="https://picsum.photos/seed/drone-chassis/400/400" alt="Drone Chassis Component" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" referrerPolicy="no-referrer" />
+              <img src="https://images.unsplash.com/photo-1527977966376-1c8408f9f108?auto=format&fit=crop&q=80&w=400" alt="Drone Chassis Component" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" referrerPolicy="no-referrer" />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                <span className="text-white text-sm font-medium">UAV Chassis</span>
+                <span className="text-white text-sm font-medium">UAV Components</span>
               </div>
             </div>
             <div className="relative rounded-2xl overflow-hidden shadow-md group h-48 md:h-64">
-              <img src="https://picsum.photos/seed/satellite-housing/400/400" alt="Satellite Housing" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" referrerPolicy="no-referrer" />
+              <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=400" alt="Satellite Housing" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" referrerPolicy="no-referrer" />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                <span className="text-white text-sm font-medium">Satellite Housing</span>
+                <span className="text-white text-sm font-medium">Satellite Structures</span>
               </div>
             </div>
             <div className="relative rounded-2xl overflow-hidden shadow-md group h-48 md:h-64">
-              <img src="https://picsum.photos/seed/jet-engine-blade/400/400" alt="Turbine Blade" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" referrerPolicy="no-referrer" />
+              <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&q=80&w=400" alt="Turbine Blade" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" referrerPolicy="no-referrer" />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                <span className="text-white text-sm font-medium">Inconel Turbine Blade</span>
+                <span className="text-white text-sm font-medium">Turbine Blades</span>
               </div>
             </div>
             <div className="relative rounded-2xl overflow-hidden shadow-md group h-48 md:h-64">
-              <img src="https://picsum.photos/seed/defense-optics/400/400" alt="Optics Mount" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" referrerPolicy="no-referrer" />
+              <img src="https://images.unsplash.com/photo-1581092162384-8987c1d64718?auto=format&fit=crop&q=80&w=400" alt="Optics Mount" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" referrerPolicy="no-referrer" />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                <span className="text-white text-sm font-medium">Defense Optics Mount</span>
+                <span className="text-white text-sm font-medium">Precision Optics</span>
               </div>
             </div>
           </div>
