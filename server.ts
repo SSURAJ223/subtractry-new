@@ -26,6 +26,10 @@ async function startServer() {
   app.use(express.json());
 
   // API routes FIRST
+  app.get('/api/health', (req, res) => {
+    res.json({ status: 'ok', message: 'Server is reachable' });
+  });
+
   app.post('/api/quote', async (req, res) => {
     try {
       const { name, email, phone, requirements } = req.body;
@@ -84,7 +88,12 @@ async function startServer() {
     const distPath = path.join(__dirname, 'dist');
     app.use(express.static(distPath));
     app.get('*', (req, res) => {
-      res.sendFile(path.join(distPath, 'index.html'));
+      res.sendFile(path.join(distPath, 'index.html'), (err) => {
+        if (err) {
+          console.error('Error sending index.html:', err);
+          res.status(404).send('Frontend build not found. Please ensure "npm run build" was executed.');
+        }
+      });
     });
   }
 
