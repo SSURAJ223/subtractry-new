@@ -93,7 +93,7 @@ export default function App() {
               </span>
             </h1>
             <p className="mt-4 text-xl text-zinc-600 max-w-3xl mx-auto mb-10">
-              Accelerate your supply chain with Subtractry. We provide high-precision, custom manufacturing for Aerospace and Defense innovators across the US and Europe.
+              Accelerate your supply chain with Subtractry. A global Manufacturing as a Service (MaaS) platform powered by an elite network of manufacturers in India and Southeast Asia, delivering high-precision components for aerospace, defense, and advanced industries worldwide.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <button 
@@ -196,9 +196,9 @@ export default function App() {
             </div>
             <div className="w-full md:w-1/2">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&q=80&w=800" alt="Precision Mechanical Engineering Component" className="w-full h-auto object-cover min-h-[300px]" referrerPolicy="no-referrer" />
+                <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&q=80&w=800" alt="Industrial Robotics Manufacturing" className="w-full h-auto object-cover min-h-[300px]" referrerPolicy="no-referrer" />
                 <div className="absolute inset-0 bg-gradient-to-t from-zinc-900/80 via-zinc-900/20 to-transparent flex items-end p-6">
-                  <span className="text-white font-medium text-lg">Mission-Critical Mechanical Components</span>
+                  <span className="text-white font-medium text-lg">Advanced Robotics Components</span>
                 </div>
               </div>
             </div>
@@ -218,31 +218,31 @@ export default function App() {
           <div className="grid md:grid-cols-3 gap-8">
             <div className="group rounded-2xl overflow-hidden shadow-lg border border-zinc-100">
               <div className="h-48 overflow-hidden relative">
-                <img src="https://images.unsplash.com/photo-1540962351504-03099e0a754b?auto=format&fit=crop&q=80&w=600" alt="Commercial Aviation" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" referrerPolicy="no-referrer" />
+                <img src="https://images.unsplash.com/photo-1540962351504-03099e0a754b?auto=format&fit=crop&q=80&w=600" alt="Aerospace & Jet Engine Components" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" referrerPolicy="no-referrer" />
               </div>
               <div className="p-6 bg-white">
-                <h3 className="text-xl font-bold text-zinc-900 mb-2">Commercial Aviation</h3>
-                <p className="text-zinc-600">Lightweight structural components, interior brackets, and engine parts manufactured to strict AS9100 standards.</p>
+                <h3 className="text-xl font-bold text-zinc-900 mb-2">Aerospace & Jet Engines</h3>
+                <p className="text-zinc-600">High-temperature alloys and precision turbine components manufactured to strict AS9100 standards for global aviation.</p>
               </div>
             </div>
             
             <div className="group rounded-2xl overflow-hidden shadow-lg border border-zinc-100">
               <div className="h-48 overflow-hidden relative">
-                <img src="https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0?auto=format&fit=crop&q=80&w=600" alt="Defense Systems" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" referrerPolicy="no-referrer" />
+                <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&q=80&w=600" alt="Advanced Robotics" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" referrerPolicy="no-referrer" />
               </div>
               <div className="p-6 bg-white">
-                <h3 className="text-xl font-bold text-zinc-900 mb-2">Defense Systems</h3>
-                <p className="text-zinc-600">ITAR-compliant manufacturing for land, sea, and air defense systems. Secure data handling and domestic production.</p>
+                <h3 className="text-xl font-bold text-zinc-900 mb-2">Advanced Robotics</h3>
+                <p className="text-zinc-600">Custom end-effectors, structural chassis, and precision gears for industrial automation and next-gen robotics platforms.</p>
               </div>
             </div>
 
             <div className="group rounded-2xl overflow-hidden shadow-lg border border-zinc-100">
               <div className="h-48 overflow-hidden relative">
-                <img src="https://images.unsplash.com/photo-1581092162384-8987c1d64718?auto=format&fit=crop&q=80&w=600" alt="Space Exploration" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" referrerPolicy="no-referrer" />
+                <img src="https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?auto=format&fit=crop&q=80&w=600" alt="Semiconductor Manufacturing" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" referrerPolicy="no-referrer" />
               </div>
               <div className="p-6 bg-white">
-                <h3 className="text-xl font-bold text-zinc-900 mb-2">Space Exploration</h3>
-                <p className="text-zinc-600">High-performance alloys and composites for satellites, launch vehicles, and orbital infrastructure.</p>
+                <h3 className="text-xl font-bold text-zinc-900 mb-2">Semiconductor</h3>
+                <p className="text-zinc-600">Ultra-clean, high-precision vacuum chamber components and wafer handling equipment for global foundries.</p>
               </div>
             </div>
           </div>
@@ -254,7 +254,7 @@ export default function App() {
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-zinc-900 mb-4">Precision in Practice</h2>
             <p className="text-lg text-zinc-600 max-w-2xl mx-auto">
-              A glimpse into the mission-critical components we manufacture for our defense and aerospace partners.
+              A glimpse into the mission-critical components we manufacture for our global aerospace, defense, and high-precision industry partners.
             </p>
           </div>
 
@@ -272,9 +272,9 @@ export default function App() {
               </div>
             </div>
             <div className="relative rounded-2xl overflow-hidden shadow-md group h-48 md:h-64">
-              <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&q=80&w=400&h=400&crop=center" alt="CAD Engineering Drawing" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" referrerPolicy="no-referrer" />
+              <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=400&h=400&crop=center" alt="Semiconductor Wafer Inspection" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" referrerPolicy="no-referrer" />
               <div className="absolute inset-0 bg-gradient-to-t from-zinc-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                <span className="text-white text-sm font-medium">CAD Engineering Drawings</span>
+                <span className="text-white text-sm font-medium">Semiconductor Wafer Inspection</span>
               </div>
             </div>
             <div className="relative rounded-2xl overflow-hidden shadow-md group h-48 md:h-64">
@@ -284,7 +284,7 @@ export default function App() {
               </div>
             </div>
             <div className="relative rounded-2xl overflow-hidden shadow-md group h-48 md:h-64">
-              <img src="https://images.unsplash.com/photo-1565814329452-e1efa11c5b89?auto=format&fit=crop&q=80&w=400&h=400&crop=center" alt="Precision CNC Milling" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" referrerPolicy="no-referrer" />
+              <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&q=80&w=400&h=400&crop=center" alt="Precision CNC Milling" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" referrerPolicy="no-referrer" />
               <div className="absolute inset-0 bg-gradient-to-t from-zinc-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
                 <span className="text-white text-sm font-medium">Precision CNC Milling</span>
               </div>
@@ -299,7 +299,7 @@ export default function App() {
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Agile Supply Chain Solutions</h2>
             <p className="text-lg text-zinc-400 max-w-2xl mx-auto">
-              A secure, streamlined process designed for the rigorous demands of defense and aerospace.
+              A secure, streamlined process designed for the rigorous demands of global aerospace, defense, and high-precision innovators.
             </p>
           </div>
 
@@ -309,7 +309,7 @@ export default function App() {
             {[
               { icon: FileText, title: '1. Submit Request', desc: 'Reach out via our secure form or email founder@subtractry.com.' },
               { icon: Cpu, title: '2. Engineering Review', desc: 'Our experts analyze your requirements for manufacturability.' },
-              { icon: Settings, title: '3. Precision Production', desc: 'Manufactured by our vetted, defense-ready partner network.' },
+              { icon: Settings, title: '3. Precision Production', desc: 'Manufactured by our vetted, global partner network.' },
               { icon: ShieldCheck, title: '4. Secure Delivery', desc: 'Fully inspected, traceable parts delivered to your facility.' }
             ].map((step, i) => (
               <div key={i} className="relative z-10 flex flex-col items-center text-center">
