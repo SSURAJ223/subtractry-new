@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Menu, X, ChevronRight, Settings, Layers, Box, 
   Cpu, Truck, ShieldCheck, Zap, Globe, FileText, Upload
@@ -296,47 +296,38 @@ export default function App() {
       {/* How to Get a Quote */}
       <section id="about" className="py-24 bg-zinc-900 text-white scroll-mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col lg:flex-row gap-16 items-center">
-            <div className="w-full lg:w-1/2">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">How to Request a Quote</h2>
-              <p className="text-lg text-zinc-400 mb-10">
-                Our streamlined quoting process is designed to get your project into production faster. Follow these simple steps to get started.
-              </p>
-              
-              <div className="space-y-8">
-                {[
-                  { icon: Upload, title: '1. Upload 3D CAD Models', desc: 'Securely upload your designs. We accept STEP, IGES, STL, and native CAD formats.' },
-                  { icon: Settings, title: '2. Specify Requirements', desc: 'Select your desired materials, surface finishes, tolerances, and production quantities.' },
-                  { icon: FileText, title: '3. Receive Your Quote', desc: 'Get a comprehensive breakdown of pricing, lead times, and manufacturability feedback.' },
-                  { icon: Truck, title: '4. Production & Delivery', desc: 'Once approved, we manufacture your parts with full traceability and deliver them to your facility.' }
-                ].map((step, i) => (
-                  <div key={i} className="flex gap-4">
-                    <div className="w-12 h-12 bg-orange-600/20 text-orange-500 rounded-xl flex items-center justify-center shrink-0 border border-orange-600/30">
-                      <step.icon size={24} />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-bold mb-1">{step.title}</h3>
-                      <p className="text-zinc-400">{step.desc}</p>
-                    </div>
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center">How to Request a Quote</h2>
+            <p className="text-lg text-zinc-400 mb-10 text-center">
+              Our streamlined quoting process is designed to get your project into production faster. Follow these simple steps to get started.
+            </p>
+            
+            <div className="space-y-8">
+              {[
+                { icon: Upload, title: '1. Upload 3D CAD Models', desc: 'Securely upload your designs. We accept STEP, IGES, STL, and native CAD formats.' },
+                { icon: Settings, title: '2. Specify Requirements', desc: 'Select your desired materials, surface finishes, tolerances, and production quantities.' },
+                { icon: FileText, title: '3. Receive Your Quote', desc: 'Get a comprehensive breakdown of pricing, lead times, and manufacturability feedback.' },
+                { icon: Truck, title: '4. Production & Delivery', desc: 'Once approved, we manufacture your parts with full traceability and deliver them to your facility.' }
+              ].map((step, i) => (
+                <div key={i} className="flex gap-4">
+                  <div className="w-12 h-12 bg-orange-600/20 text-orange-500 rounded-xl flex items-center justify-center shrink-0 border border-orange-600/30">
+                    <step.icon size={24} />
                   </div>
-                ))}
-              </div>
-              
+                  <div>
+                    <h3 className="text-xl font-bold mb-1">{step.title}</h3>
+                    <p className="text-zinc-400">{step.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+            
+            <div className="flex justify-center mt-10">
               <button 
                 onClick={() => setIsQuoteModalOpen(true)}
-                className="mt-10 bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all shadow-lg shadow-orange-600/20 hover:shadow-xl hover:shadow-orange-600/30 flex items-center justify-center gap-2 w-full sm:w-auto"
+                className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all shadow-lg shadow-orange-600/20 hover:shadow-xl hover:shadow-orange-600/30 flex items-center justify-center gap-2 w-full sm:w-auto"
               >
                 Start Your Quote <ChevronRight size={20} />
               </button>
-            </div>
-            
-            <div className="w-full lg:w-1/2">
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-zinc-800">
-                <img src="/cnc-parts-hero.jpg" alt="Precision CNC Machined Parts" className="w-full h-auto object-cover" />
-                <div className="absolute inset-0 bg-gradient-to-t from-zinc-900/80 via-transparent to-transparent flex items-end p-6">
-                  <span className="text-white font-medium text-lg">High-Precision Machined Components</span>
-                </div>
-              </div>
             </div>
           </div>
         </div>

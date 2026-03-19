@@ -21,7 +21,7 @@ function getResend() {
 
 async function startServer() {
   const app = express();
-  const PORT = Number(process.env.PORT) || 3000;
+  const PORT = 3000;
 
   app.use(express.json());
 
@@ -34,8 +34,8 @@ async function startServer() {
     try {
       const { name, email, phone, requirements } = req.body;
 
-      if (!name || !email || !phone || !requirements) {
-        return res.status(400).json({ error: 'Name, email, phone, and requirements are required.' });
+      if (!name || !email || !phone) {
+        return res.status(400).json({ error: 'Name, email, and phone are required.' });
       }
 
       const notifyEmail = process.env.NOTIFY_EMAIL || 'founder@subtractry.com';

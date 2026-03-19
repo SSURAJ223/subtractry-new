@@ -6,15 +6,6 @@
     <title>Subtractry</title>
   </head>
   <body>
-    <div id="error-container" style="color: red; padding: 20px; font-family: monospace;"></div>
-    <script>
-      window.addEventListener('error', function(event) {
-        document.getElementById('error-container').innerText += event.error ? event.error.stack : event.message + '\n';
-      });
-      window.addEventListener('unhandledrejection', function(event) {
-        document.getElementById('error-container').innerText += 'Unhandled Promise Rejection: ' + (event.reason ? event.reason.stack || event.reason : 'Unknown') + '\n';
-      });
-    </script>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
