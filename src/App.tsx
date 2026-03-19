@@ -397,20 +397,23 @@ function QuoteModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
   return (
     <AnimatePresence>
       {isOpen && (
-        <>
-          <motion.div 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            onClick={onClose}
-            className="fixed inset-0 bg-zinc-900/40 backdrop-blur-sm z-50"
-          />
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.95, y: 20 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.95, y: 20 }}
-            className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-lg bg-white rounded-2xl shadow-2xl z-50 overflow-hidden max-h-[90vh] overflow-y-auto"
-          >
+        <motion.div 
+          key="backdrop"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          onClick={onClose}
+          className="fixed inset-0 bg-zinc-900/40 backdrop-blur-sm z-50"
+        />
+      )}
+      {isOpen && (
+        <motion.div 
+          key="modal"
+          initial={{ opacity: 0, scale: 0.95, y: 20 }}
+          animate={{ opacity: 1, scale: 1, y: 0 }}
+          exit={{ opacity: 0, scale: 0.95, y: 20 }}
+          className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-lg bg-white rounded-2xl shadow-2xl z-50 overflow-hidden max-h-[90vh] overflow-y-auto"
+        >
             <div className="p-6 sm:p-8">
               <div className="flex justify-between items-start mb-2">
                 <div>
@@ -513,7 +516,6 @@ function QuoteModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
               )}
             </div>
           </motion.div>
-        </>
       )}
     </AnimatePresence>
   );
