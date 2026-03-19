@@ -293,33 +293,51 @@ export default function App() {
         </div>
       </section>
 
-      {/* How it Works */}
+      {/* How to Get a Quote */}
       <section id="about" className="py-24 bg-zinc-900 text-white scroll-mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Agile Supply Chain Solutions</h2>
-            <p className="text-lg text-zinc-400 max-w-2xl mx-auto">
-              A secure, streamlined process designed for the rigorous demands of global aerospace, defense, and high-precision innovators.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-4 gap-8 relative">
-            <div className="hidden md:block absolute top-1/2 left-0 w-full h-0.5 bg-zinc-800 -tranzinc-y-1/2 z-0"></div>
-            
-            {[
-              { icon: FileText, title: '1. Submit Request', desc: 'Reach out via our secure form or email founder@subtractry.com.' },
-              { icon: Cpu, title: '2. Engineering Review', desc: 'Our experts analyze your requirements for manufacturability.' },
-              { icon: Settings, title: '3. Precision Production', desc: 'Manufactured by our vetted, global partner network.' },
-              { icon: ShieldCheck, title: '4. Secure Delivery', desc: 'Fully inspected, traceable parts delivered to your facility.' }
-            ].map((step, i) => (
-              <div key={i} className="relative z-10 flex flex-col items-center text-center">
-                <div className="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mb-6 shadow-lg shadow-orange-900/50 border-4 border-zinc-900">
-                  <step.icon size={28} />
-                </div>
-                <h3 className="text-xl font-bold mb-2">{step.title}</h3>
-                <p className="text-zinc-400">{step.desc}</p>
+          <div className="flex flex-col lg:flex-row gap-16 items-center">
+            <div className="w-full lg:w-1/2">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">How to Request a Quote</h2>
+              <p className="text-lg text-zinc-400 mb-10">
+                Our streamlined quoting process is designed to get your project into production faster. Follow these simple steps to get started.
+              </p>
+              
+              <div className="space-y-8">
+                {[
+                  { icon: Upload, title: '1. Upload 3D CAD Models', desc: 'Securely upload your designs. We accept STEP, IGES, STL, and native CAD formats.' },
+                  { icon: Settings, title: '2. Specify Requirements', desc: 'Select your desired materials, surface finishes, tolerances, and production quantities.' },
+                  { icon: FileText, title: '3. Receive Your Quote', desc: 'Get a comprehensive breakdown of pricing, lead times, and manufacturability feedback.' },
+                  { icon: Truck, title: '4. Production & Delivery', desc: 'Once approved, we manufacture your parts with full traceability and deliver them to your facility.' }
+                ].map((step, i) => (
+                  <div key={i} className="flex gap-4">
+                    <div className="w-12 h-12 bg-orange-600/20 text-orange-500 rounded-xl flex items-center justify-center shrink-0 border border-orange-600/30">
+                      <step.icon size={24} />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold mb-1">{step.title}</h3>
+                      <p className="text-zinc-400">{step.desc}</p>
+                    </div>
+                  </div>
+                ))}
               </div>
-            ))}
+              
+              <button 
+                onClick={() => setIsQuoteModalOpen(true)}
+                className="mt-10 bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all shadow-lg shadow-orange-600/20 hover:shadow-xl hover:shadow-orange-600/30 flex items-center justify-center gap-2 w-full sm:w-auto"
+              >
+                Start Your Quote <ChevronRight size={20} />
+              </button>
+            </div>
+            
+            <div className="w-full lg:w-1/2">
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-zinc-800">
+                <img src="/cnc-parts-hero.jpg" alt="Precision CNC Machined Parts" className="w-full h-auto object-cover" />
+                <div className="absolute inset-0 bg-gradient-to-t from-zinc-900/80 via-transparent to-transparent flex items-end p-6">
+                  <span className="text-white font-medium text-lg">High-Precision Machined Components</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -360,7 +378,10 @@ function QuoteModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
     name: '',
     email: '',
     phone: '',
-    requirements: ''
+    material: '',
+    quantity: '',
+    requirements: '',
+    cadLink: ''
   });
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -382,7 +403,7 @@ function QuoteModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
         setTimeout(() => {
           onClose();
           setStatus('idle');
-          setFormData({ name: '', email: '', phone: '', requirements: '' });
+          setFormData({ name: '', email: '', phone: '', material: '', quantity: '', requirements: '', cadLink: '' });
         }, 3000);
       } else {
         setStatus('error');
@@ -477,16 +498,64 @@ function QuoteModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
                     </div>
                   </div>
 
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                      <label htmlFor="material" className="block text-sm font-medium text-zinc-700 mb-1">Material *</label>
+                      <select 
+                        id="material" 
+                        required
+                        value={formData.material}
+                        onChange={(e) => setFormData({...formData, material: e.target.value})}
+                        className="w-full px-4 py-2.5 rounded-lg border border-zinc-300 focus:ring-2 focus:ring-orange-600 focus:border-orange-600 outline-none transition-all bg-white"
+                      >
+                        <option value="" disabled>Select material</option>
+                        <option value="Aluminum 6061">Aluminum 6061</option>
+                        <option value="Aluminum 7075">Aluminum 7075</option>
+                        <option value="Stainless Steel 316L">Stainless Steel 316L</option>
+                        <option value="Stainless Steel 17-4 PH">Stainless Steel 17-4 PH</option>
+                        <option value="Titanium Ti-6Al-4V">Titanium Ti-6Al-4V</option>
+                        <option value="Inconel 718/625">Inconel 718/625</option>
+                        <option value="PEEK / ULTEM">PEEK / ULTEM</option>
+                        <option value="Other">Other (Specify below)</option>
+                      </select>
+                    </div>
+                    <div>
+                      <label htmlFor="quantity" className="block text-sm font-medium text-zinc-700 mb-1">Quantity *</label>
+                      <input 
+                        type="number" 
+                        id="quantity" 
+                        required
+                        min="1"
+                        value={formData.quantity}
+                        onChange={(e) => setFormData({...formData, quantity: e.target.value})}
+                        className="w-full px-4 py-2.5 rounded-lg border border-zinc-300 focus:ring-2 focus:ring-orange-600 focus:border-orange-600 outline-none transition-all"
+                        placeholder="e.g., 100"
+                      />
+                    </div>
+                  </div>
+
                   <div>
-                    <label htmlFor="requirements" className="block text-sm font-medium text-zinc-700 mb-1">What do you want to manufacture? *</label>
+                    <label htmlFor="cadLink" className="block text-sm font-medium text-zinc-700 mb-1">CAD File Link (Optional)</label>
                     <input 
-                      type="text"
+                      type="url"
+                      id="cadLink" 
+                      value={formData.cadLink}
+                      onChange={(e) => setFormData({...formData, cadLink: e.target.value})}
+                      className="w-full px-4 py-2.5 rounded-lg border border-zinc-300 focus:ring-2 focus:ring-orange-600 focus:border-orange-600 outline-none transition-all"
+                      placeholder="Link to Google Drive, Dropbox, etc. (STEP, IGES, STL)"
+                    />
+                    <p className="text-xs text-zinc-500 mt-1">If you don't have a link, we will email you to securely collect your files.</p>
+                  </div>
+
+                  <div>
+                    <label htmlFor="requirements" className="block text-sm font-medium text-zinc-700 mb-1">Additional Requirements & Finishes</label>
+                    <textarea 
                       id="requirements" 
-                      required
+                      rows={3}
                       value={formData.requirements}
                       onChange={(e) => setFormData({...formData, requirements: e.target.value})}
-                      className="w-full px-4 py-2.5 rounded-lg border border-zinc-300 focus:ring-2 focus:ring-orange-600 focus:border-orange-600 outline-none transition-all"
-                      placeholder="e.g., 500 units of aluminum 7075 brackets for drone chassis"
+                      className="w-full px-4 py-2.5 rounded-lg border border-zinc-300 focus:ring-2 focus:ring-orange-600 focus:border-orange-600 outline-none transition-all resize-none"
+                      placeholder="e.g., Anodize Type II, tight tolerances on bore, etc."
                     />
                   </div>
 
